@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>Tic Tac Toe</h1>
+
+<div class="score-container">
+    <div class="score-box" id="player">
+        <h3>PLAYER (X)</h3>
+        <p class="score-number" id="sx">0</p>
+    </div>
+    
+    <div class="score-box" id="tie">
+        <h3>TIE</h3>
+        <p class="score-number" id="st">0</p>
+    </div>
+    
+    <div class="score-box" id="computer">
+        <h3>COMPUTER (O)</h3>
+        <p class="score-number" id="so">0</p>
+    </div>
+</div>
+
+<div class="turn-indicator" id="turn-indicator">Player's Turn (X)</div>
+
+<div class="board-wrapper">
+    <div class="board">
+        {% for i in range(9) %}
+        <div class="cell" data-i="{{i}}"></div>
+        {% endfor %}
+    </div>
+    <div id="win-line"></div>
+</div>
+
+<button onclick="reset()">RESET GAME</button>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
