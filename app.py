@@ -3,7 +3,9 @@ from game_logic import check_winner
 from ai import best_move
 import copy
 
-app = Flask(__name__)
+# Configure Flask to look for templates in the current directory (root)
+# instead of the default 'templates' folder
+app = Flask(__name__, template_folder='.')
 
 state = {
     "board": [""] * 9,
